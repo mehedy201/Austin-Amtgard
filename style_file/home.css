@@ -24,7 +24,7 @@
   box-sizing: border-box;
 }
 body {
-  background: url(../assets/home-page/home_box_background.avif) no-repeat top/cover;
+  background: url('../assets/home-page/home-body-bg.avif') no-repeat top/cover;
 }
 .container {
     width: min(100%, 1200px);
@@ -48,7 +48,7 @@ p {
 /* ______Home Page CSS Start_______ */
 /* ________________________________ */
 .home_page {
-    min-height: 70vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -58,6 +58,7 @@ p {
     color: var(--primary-heading-text-color);
     text-align: center;
     padding: 50px 0px 5px 0px;
+    text-stroke: 2px black;;
 }
 .home_page .home_heading_sub_text {
     text-align: center;
