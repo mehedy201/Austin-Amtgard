@@ -1,18 +1,44 @@
 :root {
-  --primary-heading-text-color: #e0b860;
-  --button-text-color: #1f3a32;
-  --golden-border-color-1: #c9a24d;
-  --golden-border-color-2: #e0b860;
-  --bg-paper-texture1: url('../assets/backgroundImage/body_bg_1.avif');
-  --bg-button: url('../assets/backgroundImage/buttonBackground.avif');
-  --font-home-heading: "Pirata One", serif;
-  --font-heading: "Cinzel", serif;
-  --font-text: "Inter", sans-serif;
+  --new_primary-heading-text-color: #2b2b2b;
+  --new_text-color: #3a2f24;
+  --new_button-text-color: #1f3a32;
+  --new_golden-border-color-1: #c9a24d;
+  --new_golden-border-color-2: #e0b860;
+  --new_bg-paper-texture1: url('../assets/backgroundImage/body_bg_1.avif');
+  --new_bg-button: url('../assets/backgroundImage/buttonBackground.avif');
+  --new_font-home-heading: "Pirata One", serif;
+  --new_font-heading: "Cinzel", serif;
+  --new_font-text: "Inter", sans-serif;
 }
 
 body {
   background: var(--bg-paper-texture1) no-repeat top/cover;
 }
 .new_players_page{
+    position: relative;
     min-height: 70vh;
+}
+
+/* Top Icons  */
+.new_players_page .top_left_icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: auto;
+}
+.new_players_page .top_center_icon{
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+}
+.new_players_page .top_right_icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: auto;
 }
