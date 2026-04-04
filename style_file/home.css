@@ -87,6 +87,10 @@ body {
     background: var(--bg-button) no-repeat top/cover;
     padding: 3px;
     border-radius: 5px;
+    transition: 0.5s;
+}
+.home_cta_inside:hover{
+    background-position-y: -20px;
 }
 .home_cta_inside .home_cta_border{
     background-color: transparent;

@@ -84,6 +84,10 @@ header .header_golden_bar{
     background: var(--bg-button) center/cover no-repeat;
     padding: 3px;
     border-radius: 5px;
+    transition: 0.5s;
+}   
+.header_button_parent:hover{
+    background-position-y: -20px;
 }   
 .header_button{
     padding: 4px 30px !important;
