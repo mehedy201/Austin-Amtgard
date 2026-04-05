@@ -76,9 +76,10 @@ body {
 .new_players_first_section .sec_first_content {
   padding-top: 40px;
 }
-.new_players_first_section .sec_first_content .new_hero_heading {
-  font-size: 32px;
+.new_hero_heading {
+  font-size: 36px;
   font-weight: 700;
+  padding: 10px 0px;
 }
 /* First section card  */
 .first_sec_card_div {
@@ -86,16 +87,12 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
-.first_sec_card_div .first_sec_card_parent {
-  border: 3px solid rgb(161, 107, 0);
-  border-radius: 5px;
-  background: url(--new_bg-button) center/cover;
-}
-.first_sec_card_div .first_sec_card_parent .first_sec_card_child {
+
+.first_sec_card_div .first_sec_card_child {
     position: relative;
     padding: 20px;
-    border: 3.5px solid rgb(126, 84, 0);
-    border-radius: 1px;
+    border: 6px ridge var(--new_golden-border-color-1);
+    border-radius: 4px;
 }
 
 /* card Icons  */
@@ -133,9 +130,6 @@ body {
     .first_sec_card_div {
         grid-template-columns: repeat(1, 1fr);
     }
-    /* .new_players_first_section {
-        flex-direction: column;
-    } */
 }
 @media (max-width: 768px) {
     .new_players_first_section .sec_first_hero_img {
@@ -190,6 +184,69 @@ body {
 .divider{
     width: 100%;
     margin: 0px 0px 1px 0px;
-    border-top: 1.5px solid var(--new_golden-border-color-1);
-    border-bottom: 1.5px solid rgb(126, 84, 0);
+    padding-bottom: 2px;
+    border: 6px ridge var(--new_golden-border-color-1);
+}
+
+/*  Second Section  */
+.new_players_section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+.new_players_section .new_players_section_img{
+    width: 100%;
+    height: auto;
+}
+
+.new_players_section ul li{
+    margin-left: 25px;
+    font-family: var(--new_font-text);
+}
+/* Responsive second section  */
+@media (max-width: 768px) {
+    .new_players_section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .new_players_section .grid_img_box_second_sec{
+        order: -1;
+    }
+   
+}
+
+/* Third Section  */
+.new_players_section_third{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.new_players_section_third .new_players_third_section_img{
+    width: 400px;
+    height: auto;
+}
+/* table  */
+.third_sec_table {
+  width: 100%;
+  margin: 10px 0px;
+  border-collapse: collapse;
+  overflow: auto;
+}
+.third_sec_table td {
+  border: 4px ridge var(--new_golden-border-color-1);
+  font-family: var(--new_font-text);
+}
+.third_sec_table ul li {
+    margin-left: 15px;
+    font-family: var(--new_font-text);
+}
+/* Responsive third section  */
+@media (max-width: 1020px) {
+    .new_players_section_third {
+        flex-direction: column;
+    }
+   .new_players_section_third .new_players_third_section_img{
+        width: 100%;
+    }
 }
