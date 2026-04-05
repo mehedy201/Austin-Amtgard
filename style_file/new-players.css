@@ -215,38 +215,91 @@ body {
    
 }
 
-/* Third Section  */
-.new_players_section_third{
+/* Third and Four Section  */
+.new_players_section_third_and_four{
     padding: 20px 0px;
     display: flex;
     align-items: center;
     gap: 30px;
 }
-.new_players_section_third .new_players_third_section_img{
-    width: 400px;
+.new_players_section_third_and_four .new_players_third_and_four_section_img{
+    width: 500px;
     height: auto;
 }
 /* table  */
-.third_sec_table {
+.third_and_four_sec_table {
   width: 100%;
   margin: 10px 0px;
   border-collapse: collapse;
   overflow: auto;
 }
-.third_sec_table td {
+.third_and_four_sec_table td {
   border: 4px ridge var(--new_golden-border-color-1);
   font-family: var(--new_font-text);
 }
-.third_sec_table ul li {
+.third_and_four_sec_table ul li {
     margin-left: 15px;
     font-family: var(--new_font-text);
 }
 /* Responsive third section  */
 @media (max-width: 1020px) {
-    .new_players_section_third {
+    .new_players_section_third_and_four {
         flex-direction: column;
     }
-   .new_players_section_third .new_players_third_section_img{
+   .new_players_section_third_and_four .new_players_third_and_four_section_img{
         width: 100%;
+    }
+}
+
+/* Section Six  */
+.new_sec_six{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px 0px;
+    align-items: center;
+}
+
+/* Location  */
+.new_players_location{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+.new_players_location_img{
+    width: 30px;
+    height: 30px;
+}
+.new_sec_six_img{
+    width: 100%;
+    height: auto;
+}
+/* Section six Responsive  */
+@media (max-width: 768px) {
+    .new_sec_six{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Section Seven  */
+.new_sec_seven .new_sec_saven_card_paren_div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    padding: 20px 0px;
+}
+.new_sec_seven .new_sec_saven_card_paren_div .new_card_img{
+    width: 100%;
+    height: auto;
+}
+/* Section Seven Responsive  */
+@media (max-width: 768px) {
+    .new_sec_seven .new_sec_saven_card_paren_div{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 576px) {
+    .new_sec_seven .new_sec_saven_card_paren_div{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
