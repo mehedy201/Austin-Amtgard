@@ -1,0 +1,302 @@
+:root {
+  --calendar_primary-heading-text-color: #2b2b2b;
+  --calendar_text-color: #3a2f24;
+  --calendar_button-text-color: #1f3a32;
+  --calendar_golden-border-color-1: #b67e04;
+  --calendar_golden-border-color-2: #e0b860;
+  --calendar_bg-paper-texture1: url("../assets/backgroundImage/body_bg_1.avif");
+  --calendar_bg-button: url("../assets/backgroundImage/buttonBackground.avif");
+  --calendar_font-home-heading: "Pirata One", serif;
+  --calendar_font-heading: "Cinzel", serif;
+  --calendar_font-text: "Inter", sans-serif;
+}
+
+body {
+  background: var(--bg-paper-texture1) no-repeat top/cover;
+}
+
+
+/* Titles */
+
+.page-title {
+
+font-family: var(--calendar_font-heading);
+font-size: 42px;
+text-align:center;
+margin-bottom:20px;
+
+}
+
+/* Calendar Controls */
+
+.calendar-controls {
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+margin-bottom:15px;
+
+}
+
+.calendar-controls button {
+
+padding:6px 12px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+#yearDisplay {
+font-family: var(--calendar_font-heading);
+font-size:24px;
+
+}
+
+/* Month Navigation */
+
+.month-navigation {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+margin-bottom:15px;
+padding: 2px;
+border: 2px ridge var(--calendar_golden-border-color-1);
+}
+
+.month-btn {
+padding:10px 16px;
+border:2px ridge var(--calendar_golden-border-color-1);
+cursor:pointer;
+font-size:14px;
+font-weight: 500;
+background:transparent;
+font-family: var(--calendar_font-text);
+}
+
+.month-btn.active {
+
+background: var(--calendar_bg-button);
+color:white;
+
+}
+
+/* Selected Month Title */
+
+.selected-month-title {
+font-family: var(--calendar_font-heading);
+font-size: 28px;
+text-align: center;
+margin-bottom: 10px;
+color: var(--calendar_primary-heading-text-color);
+}
+
+/* Calendar */
+
+.calendar-wrapper {
+border:6px ridge var(--calendar_golden-border-color-1);
+transition: height 0.5s ease;
+}
+
+.calendar-table {
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+.calendar-table th {
+
+font-family: var(--calendar_font-heading);
+padding:10px;
+border:2px ridge var(--calendar_golden-border-color-1);
+background:var(--calendar_golden-border-color-1);
+
+}
+
+.calendar-table td {
+height:80px;
+vertical-align:top;
+padding:15px;
+border:3px ridge var(--calendar_golden-border-color-1);
+font-weight:700;
+font-family: var(--calendar_font-text);
+}
+
+/* Today */
+
+.today {
+
+background:var(--calendar_golden-border-color-1);
+
+}
+
+/* Event day */
+
+.event-day {
+
+background:var(--calendar_bg-button) center/cover;
+
+}
+
+/* Weekly Schedule */
+
+.weekly-schedule {
+
+margin-top:40px;
+
+}
+
+.weekly-schedule h2 {
+
+font-family: var(--calendar_font-heading);
+margin-bottom:10px;
+
+}
+
+.weekly-schedule ul {
+
+list-style:none;
+
+}
+
+.weekly-schedule li {
+
+padding:8px;
+border-bottom:1px solid #ddd;
+
+}
+
+/* Saturday Highlight */
+
+.saturday {
+
+background: var(--calendar_bg-button);
+color:white;
+font-weight:600;
+
+}
+
+/* Events */
+
+.events-section {
+
+margin-top:40px;
+
+}
+
+.events-section h2 {
+
+font-family: var(--calendar_font-heading);
+margin-bottom:10px;
+
+}
+
+.events-table {
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+.events-table th,
+.events-table td {
+
+border:2px ridge var(--calendar_golden-border-color-1);
+padding:10px;
+text-align:left;
+
+}
+
+.events-table tbody tr {
+
+cursor:pointer;
+
+}
+
+.events-table tbody tr:hover {
+
+background:#f0f0f0;
+
+}
+
+/* Event Detail */
+
+.event-detail {
+
+margin-top:20px;
+border:6px ridge var(--calendar_golden-border-color-1);
+padding:20px;
+background:white;
+
+animation: fadeIn .3s ease;
+
+}
+
+.hidden {
+
+display:none;
+
+}
+
+.event-detail h3 {
+
+font-family: var(--calendar_font-heading);
+margin-bottom:6px;
+
+}
+
+.event-detail h4 {
+
+color:#555;
+margin-bottom:10px;
+
+}
+
+.event-detail ul {
+
+margin-top:10px;
+padding-left:20px;
+
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+
+from {
+opacity:0;
+transform: translateY(10px);
+}
+
+to {
+opacity:1;
+transform: translateY(0);
+}
+
+}
+
+
+/* =========================
+Smooth UI Animations
+========================= */
+
+.fade-transition {
+
+animation: fadeSwitch 0.5s ease;
+
+}
+
+@keyframes fadeSwitch {
+
+0% {
+opacity: 0;
+transform: translateY(8px);
+}
+
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+
+}

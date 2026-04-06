@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style_file/header_footer.css" />
+    <link rel="stylesheet" href="./style_file/calendar.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,10 +75,90 @@
     </nav>
 
     <!-- Main Body  -->
-    <main>
-      <h1>Calendar</h1>
-    </main>
 
+    <main class="container">
+      <!-- ============================= -->
+      <!-- Calendar Section -->
+      <!-- ============================= -->
+
+      <section class="calendar-section">
+        <h1 class="page-title">Calendar</h1>
+
+        <div class="calendar-controls">
+          <button id="prevYear">◀</button>
+
+          <h2 id="yearDisplay"></h2>
+
+          <button id="nextYear">▶</button>
+        </div>
+
+        <div class="month-navigation" id="monthNav"></div>
+        <h2 id="selectedMonthTitle"
+          class="selected-month-title">
+        </h2>
+
+        <div class="calendar-wrapper">
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>Th</th>
+                <th>F</th>
+                <th>S</th>
+              </tr>
+            </thead>
+
+            <tbody id="calendarBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============================= -->
+      <!-- Weekly Schedule -->
+      <!-- ============================= -->
+
+      <section class="weekly-schedule">
+        <h2>Weekly Park Schedule</h2>
+
+        <ul>
+          <li>Sunday — Closed</li>
+          <li>Monday — —</li>
+          <li>Tuesday — —</li>
+          <li>Wednesday — —</li>
+          <li>Thursday — —</li>
+          <li>Friday — —</li>
+
+          <li class="saturday">Saturday — MAIN PARK DAY</li>
+        </ul>
+      </section>
+
+      <!-- ============================= -->
+      <!-- Upcoming Events -->
+      <!-- ============================= -->
+
+      <section class="events-section">
+        <h2>Upcoming Events</h2>
+
+        <table class="events-table">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Date</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+
+          <tbody id="eventsTable"></tbody>
+        </table>
+
+        <!-- Expandable Event Detail -->
+
+        <div id="eventDetail" class="event-detail hidden"></div>
+      </section>
+    </main>
     <footer>
       <div class="footer_golden_bar"></div>
       <div class="container">
@@ -94,6 +175,9 @@
       </div>
     </footer>
 
-    <script src="./js_script.js"></script>
+
+    <script type="module" src="./data/data.js"></script>
+    <script type="module" src="./javascript/calendar.js"></script>
+    <script src="./javascript/header_footer.js"></script>
   </body>
 </html>
