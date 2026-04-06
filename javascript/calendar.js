@@ -207,38 +207,97 @@ function renderCalendar() {
 Show Detail
 ========================= */
 
+// function showEventDetail(event) {
+//   const box = document.getElementById("eventDetail");
+
+//   box.classList.remove("hidden");
+
+//   box.innerHTML = `
+// <h3>
+// ${event.title || ""}
+// </h3>
+// <h4>
+// ${event.subtitle || ""}
+// </h4>
+// <p>
+// <strong>Date & Time:</strong>
+// ${event.date || "N/A"} - ${event.time || "N/A"}
+// </p>
+// <p>
+// <strong>Location:</strong>
+// ${event.fullLocation || "N/A"}
+// </p>
+// <p>
+// ${event.description || ""}
+// </p>
+// <p>
+// <strong>Food Rule:</strong>
+// ${event.foodRule || "N/A"}
+// </p>
+// <ul>
+// ${event.categories?.map((c) => `<li>${c}</li>`).join("") || "No categories"}
+// </ul>
+// `;
+// }
+
+
+
+/* =========================
+Show Detail with Animation
+========================= */
 function showEventDetail(event) {
+  const overlay = document.getElementById("modalOverlay");
   const box = document.getElementById("eventDetail");
 
-  box.classList.remove("hidden");
-
+  // Inject content with the Close (X) button
   box.innerHTML = `
-<h3>
-${event.title || ""}
-</h3>
-<h4>
-${event.subtitle || ""}
-</h4>
-<p>
-<strong>Date & Time:</strong>
-${event.date || "N/A"} - ${event.time || "N/A"}
-</p>
-<p>
-<strong>Location:</strong>
-${event.fullLocation || "N/A"}
-</p>
-<p>
-${event.description || ""}
-</p>
-<p>
-<strong>Food Rule:</strong>
-${event.foodRule || "N/A"}
-</p>
-<ul>
-${event.categories?.map((c) => `<li>${c}</li>`).join("") || "No categories"}
-</ul>
-`;
+    <span class="close-popup" id="closePopupBtn">&times;</span>
+    <h3>${event.title || "No Title"}</h3>
+    <h4>${event.subtitle || ""}</h4>
+    <div style="margin-top: 15px; line-height: 1.6;">
+      <p><strong>Date & Time:</strong> ${event.date || "N/A"} - ${event.time || "N/A"}</p>
+      <p><strong>Location:</strong> ${event.fullLocation || "N/A"}</p>
+      <p>${event.description || ""}</p>
+      <p><strong>Food Rule:</strong> ${event.foodRule || "N/A"}</p>
+    </div>
+    <ul style="margin-top: 15px; padding-left: 20px;">
+      ${event.categories?.map((c) => `<li>${c}</li>`).join("") || "No categories"}
+    </ul>
+  `;
+
+  // Add the active class to trigger 0.5s Fade Up animation
+  overlay.classList.add("active");
+
+  // Close button click event
+  document.getElementById("closePopupBtn").onclick = closeModal;
 }
+
+// Close Modal Function
+function closeModal() {
+  const overlay = document.getElementById("modalOverlay");
+  
+  // Remove active class to trigger 0.5s Fade Down animation
+  overlay.classList.remove("active");
+}
+
+// Global Click Event
+// Close popup if user clicks on the dark background
+window.onclick = function(event) {
+  const overlay = document.getElementById("modalOverlay");
+  if (event.target == overlay) {
+    closeModal();
+  }
+};
+
+
+
+
+
+
+
+
+
+
 
 function renderEvents() {
   const tbody = document.getElementById("eventsTable");
