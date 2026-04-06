@@ -18,16 +18,16 @@
 
 
 body {
-  background: url('../assets/home-page/home-body-bg.avif') no-repeat top/cover;
+  background: url('../assets/home-page/hero.avif') no-repeat top/cover;
 }
 
 /* ________________________________ */
 /* ______Home Page CSS Start_______ */
 /* ________________________________ */
 .home_page {
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
-    align-items: center;
+    align-items:center;
 }
 .home_page .home_heading {
     font-family: var(--font-home-heading);
@@ -124,11 +124,22 @@ body {
 
 
 /* Responsive */
+
+@media (min-width: 1500px) {
+  .home_page {
+    min-height: 100vh;
+  }
+}
+@media (max-width: 1500px) {
+  .home_page {
+    align-items: end;
+  }
+}
+
 @media (max-width: 1111px) {
   .home_page .card_div {
     grid-template-columns: repeat(2, 1fr);
   }
- 
 }
 @media (max-width: 768px) {
   .home_page .home_heading {

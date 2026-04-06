@@ -67,7 +67,7 @@ body {
   gap: 30px;
 }
 .new_players_first_section .sec_first_hero_img {
-  width: 300px;
+  max-width: 400px;
   height: auto;
 }
 .new_players_first_section .sec_first_text {
