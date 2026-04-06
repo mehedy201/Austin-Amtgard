@@ -14,12 +14,9 @@
 body {
   background: var(--bg-paper-texture1) no-repeat top/cover;
 }
-
-
 /* Calander Page Styles  */
 .calendar_page {
   position: relative;
-  min-height: 70vh;
 }
 
 /* Top Icons  */
@@ -64,7 +61,6 @@ body {
 }
 
 /* Titles */
-
 .calendar_page_title{
 padding-top: 40px;
 font-family: var(--calendar_font-heading);
@@ -83,7 +79,6 @@ margin-bottom:20px;
 }
 
 /* Calendar Controls */
-
 .calendar-controls {
 display:flex;
 justify-content:center;
@@ -105,7 +100,6 @@ font-size:24px;
 }
 
 /* Month Navigation */
-
 .month-navigation {
 display:flex;
 flex-wrap:wrap;
@@ -129,7 +123,6 @@ color:white;
 }
 
 /* Selected Month Title */
-
 .selected-month-title {
 font-family: var(--calendar_font-heading);
 font-size: 28px;
@@ -139,7 +132,6 @@ color: var(--calendar_primary-heading-text-color);
 }
 
 /* Calendar */
-
 .calendar-wrapper {
 border:6px ridge var(--calendar_golden-border-color-1);
 transition: height 0.5s ease;
@@ -167,27 +159,22 @@ font-family: var(--calendar_font-text);
 }
 
 /* Today */
-
 .today {
 background:var(--calendar_golden-border-color-1);
 }
 
 /* Event day */
-
 .event-day {
 background:var(--calendar_bg-button) center/cover;
 }
 
 /* Weekly Schedule */
-
 .weekly-schedule {
 margin-top:40px;
 }
-
 .weekly-schedule h2 {
 font-family: var(--calendar_font-heading);
 margin-bottom:10px;
-
 }
 .weekly-schedule ul {
 list-style:none;
@@ -206,7 +193,6 @@ font-weight:600;
 }
 
 /* Events */
-
 .events-section {
 margin-top:40px;
 }

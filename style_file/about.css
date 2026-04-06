@@ -1,0 +1,77 @@
+:root {
+  --about_primary-heading-text-color: #2b2b2b;
+  --about_text-color: #3a2f24;
+  --about_button-text-color: #1f3a32;
+  --about_golden-border-color-1: #b67e04;
+  --about_golden-border-color-2: #e0b860;
+  --about_bg-paper-texture1: url("../assets/backgroundImage/body_bg_1.avif");
+  --about_bg-button: url("../assets/backgroundImage/buttonBackground.avif");
+  --about_font-home-heading: "Pirata One", serif;
+  --about_font-heading: "Cinzel", serif;
+  --about_font-text: "Inter", sans-serif;
+}
+body {
+  background: var(--about_bg-paper-texture1) no-repeat top/cover;
+}
+
+.about_page {
+  position: relative;
+  min-height: 70vh;
+}
+/* Top Icons  */
+.about_page .top_left_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+.about_page .top_center_icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+}
+.about_page .top_right_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive icon sizes*/
+@media (max-width: 768px) {
+  .about_page .top_left_icon {
+    width: 80px;
+    height: auto;
+  }
+  .about_page .top_center_icon {
+    width: 200px;
+    height: auto;
+    top: -20px;
+  }
+  .about_page .top_right_icon {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Titles */
+.about_page_title{
+padding-top: 40px;
+font-family: var(--about_font-heading);
+font-size: 42px;
+text-align:center;
+margin-bottom:20px;
+}
+/* divider  */
+.divider{
+    width: 100%;
+    margin: 0px 0px 1px 0px;
+    padding-bottom: 2px;
+    border: 4px ridge var(--about_golden-border-color-1);
+    box-shadow: 5px 5px 10px var(--about_primary-heading-text-color);
+}
