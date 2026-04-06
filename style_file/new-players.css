@@ -185,7 +185,8 @@ body {
     width: 100%;
     margin: 0px 0px 1px 0px;
     padding-bottom: 2px;
-    border: 6px ridge var(--new_golden-border-color-1);
+    border: 4px ridge var(--new_golden-border-color-1);
+    box-shadow: 5px 5px 10px var(--new_primary-heading-text-color);
 }
 
 /*  Second Section  */

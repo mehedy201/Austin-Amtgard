@@ -83,31 +83,96 @@ document.getElementById("nextYear").onclick = () => {
 Render Calendar
 ========================= */
 
+// function renderCalendar() {
+//   updateSelectedMonthTitle();
+//   document.getElementById("yearDisplay").textContent = currentYear;
+
+//   const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+//   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+//   const tbody = document.getElementById("calendarBody");
+
+//   tbody.innerHTML = "";
+//   let date = 1;
+
+//   for (let i = 0; i < 6; i++) {
+//     let row = document.createElement("tr");
+//     for (let j = 0; j < 7; j++) {
+//       let cell = document.createElement("td");
+//       if (i === 0 && j < firstDay) {
+//         cell.textContent = "";
+//       } else if (date > daysInMonth) {
+//         break;
+//       } else {
+//         cell.textContent = date;
+
+//         /* Today Highlight */
+//         const today = new Date();
+
+//         if (
+//           date === today.getDate() &&
+//           currentMonth === today.getMonth() &&
+//           currentYear === today.getFullYear()
+//         ) {
+//           cell.classList.add("today");
+//         }
+
+//         /* Event Highlight */
+//         let d = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
+//         let matchedEvent = data.find((e) => e.date === d);
+
+//         if (matchedEvent) {
+//           cell.classList.add("event-day");
+//           /* Click Event */
+//           cell.style.cursor = "pointer";
+//           cell.onclick = () => {
+//             showEventDetail(matchedEvent);
+//           };
+//         }
+//         date++;
+//       }
+//       row.appendChild(cell);
+//     }
+//     tbody.appendChild(row);
+//   }
+// }
+
+
+/**
+ * Renders the calendar with a fixed 7-row structure.
+ * This ensures the calendar height remains consistent across all months.
+ */
 function renderCalendar() {
   updateSelectedMonthTitle();
   document.getElementById("yearDisplay").textContent = currentYear;
 
+  // Get the starting day of the week (0-6) and total days in the current month
   const firstDay = new Date(currentYear, currentMonth, 1).getDay();
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
   const tbody = document.getElementById("calendarBody");
 
-  tbody.innerHTML = "";
+  tbody.innerHTML = ""; // Clear existing rows
   let date = 1;
 
+  // Outer loop: Fixed to 6 rows
   for (let i = 0; i < 6; i++) {
     let row = document.createElement("tr");
+
+    // Inner loop: 7 days per week
     for (let j = 0; j < 7; j++) {
       let cell = document.createElement("td");
+
       if (i === 0 && j < firstDay) {
+        // Empty cells for days before the 1st of the month
         cell.textContent = "";
       } else if (date > daysInMonth) {
-        break;
+        // Empty cells for days after the month ends
+        cell.textContent = ""; 
+        // Note: No 'break' used here to ensure all 7 rows/cells are created
       } else {
         cell.textContent = date;
 
-        /* Today Highlight */
+        /* Highlight Current Date (Today) */
         const today = new Date();
-
         if (
           date === today.getDate() &&
           currentMonth === today.getMonth() &&
@@ -116,14 +181,16 @@ function renderCalendar() {
           cell.classList.add("today");
         }
 
-        /* Event Highlight */
+        /* Check and Highlight Events */
+        // Formats date as YYYY-MM-DD for comparison
         let d = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
         let matchedEvent = data.find((e) => e.date === d);
 
         if (matchedEvent) {
           cell.classList.add("event-day");
-          /* Click Event */
           cell.style.cursor = "pointer";
+          
+          // Click event to show details
           cell.onclick = () => {
             showEventDetail(matchedEvent);
           };
@@ -135,6 +202,8 @@ function renderCalendar() {
     tbody.appendChild(row);
   }
 }
+
+
 
 /* =========================
 Show Detail
