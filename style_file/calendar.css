@@ -143,6 +143,9 @@ color: var(--calendar_primary-heading-text-color);
 .calendar-wrapper {
 border:6px ridge var(--calendar_golden-border-color-1);
 transition: height 0.5s ease;
+width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 .calendar-table {
 width:100%;
