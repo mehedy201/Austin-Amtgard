@@ -194,6 +194,10 @@ color:white;
 font-weight:600;
 }
 
+.weekly-schedule li{
+  font-family: var(--calendar_font-text);
+}
+
 /* Events */
 .events-section {
 margin-top:40px;
@@ -240,21 +244,6 @@ margin-bottom:10px;
 margin-top:10px;
 padding-left:20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Base Overlay Styles */
 .modal-overlay {
