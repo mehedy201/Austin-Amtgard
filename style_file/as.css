@@ -86,6 +86,7 @@ margin-bottom:10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding-top: 20px
 }
 .as_card_box{
     border: 1px solid var(--as_golden-border-color-1);
