@@ -83,31 +83,42 @@ document.getElementById("nextYear").onclick = () => {
 Render Calendar
 ========================= */
 
+/**
+ * Renders the calendar with a fixed 7-row structure.
+ * This ensures the calendar height remains consistent across all months.
+ */
 // function renderCalendar() {
 //   updateSelectedMonthTitle();
 //   document.getElementById("yearDisplay").textContent = currentYear;
 
+//   // Get the starting day of the week (0-6) and total days in the current month
 //   const firstDay = new Date(currentYear, currentMonth, 1).getDay();
 //   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 //   const tbody = document.getElementById("calendarBody");
 
-//   tbody.innerHTML = "";
+//   tbody.innerHTML = ""; // Clear existing rows
 //   let date = 1;
 
+//   // Outer loop: Fixed to 6 rows
 //   for (let i = 0; i < 6; i++) {
 //     let row = document.createElement("tr");
+
+//     // Inner loop: 7 days per week
 //     for (let j = 0; j < 7; j++) {
 //       let cell = document.createElement("td");
+
 //       if (i === 0 && j < firstDay) {
+//         // Empty cells for days before the 1st of the month
 //         cell.textContent = "";
 //       } else if (date > daysInMonth) {
-//         break;
+//         // Empty cells for days after the month ends
+//         cell.textContent = ""; 
+//         // Note: No 'break' used here to ensure all 7 rows/cells are created
 //       } else {
 //         cell.textContent = date;
 
-//         /* Today Highlight */
+//         /* Highlight Current Date (Today) */
 //         const today = new Date();
-
 //         if (
 //           date === today.getDate() &&
 //           currentMonth === today.getMonth() &&
@@ -116,14 +127,16 @@ Render Calendar
 //           cell.classList.add("today");
 //         }
 
-//         /* Event Highlight */
+//         /* Check and Highlight Events */
+//         // Formats date as YYYY-MM-DD for comparison
 //         let d = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
 //         let matchedEvent = data.find((e) => e.date === d);
 
 //         if (matchedEvent) {
 //           cell.classList.add("event-day");
-//           /* Click Event */
 //           cell.style.cursor = "pointer";
+          
+//           // Click event to show details
 //           cell.onclick = () => {
 //             showEventDetail(matchedEvent);
 //           };
@@ -136,42 +149,59 @@ Render Calendar
 //   }
 // }
 
-
-/**
- * Renders the calendar with a fixed 7-row structure.
- * This ensures the calendar height remains consistent across all months.
- */
 function renderCalendar() {
   updateSelectedMonthTitle();
   document.getElementById("yearDisplay").textContent = currentYear;
 
-  // Get the starting day of the week (0-6) and total days in the current month
   const firstDay = new Date(currentYear, currentMonth, 1).getDay();
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
   const tbody = document.getElementById("calendarBody");
 
-  tbody.innerHTML = ""; // Clear existing rows
+  tbody.innerHTML = "";
   let date = 1;
 
-  // Outer loop: Fixed to 6 rows
   for (let i = 0; i < 6; i++) {
     let row = document.createElement("tr");
 
-    // Inner loop: 7 days per week
     for (let j = 0; j < 7; j++) {
       let cell = document.createElement("td");
 
       if (i === 0 && j < firstDay) {
-        // Empty cells for days before the 1st of the month
-        cell.textContent = "";
+        cell.innerHTML = "";
       } else if (date > daysInMonth) {
-        // Empty cells for days after the month ends
-        cell.textContent = ""; 
-        // Note: No 'break' used here to ensure all 7 rows/cells are created
+        cell.innerHTML = "";
       } else {
-        cell.textContent = date;
 
-        /* Highlight Current Date (Today) */
+        /* Format date */
+        let d = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
+
+        /* Find all events for that day */
+        let matchedEvents = data.filter((e) => e.date === d);
+
+        /* Date number always show */
+        let cellHTML = `<div class="date-number">${date}</div>`;
+
+        /* If event exists show title */
+        if (matchedEvents.length > 0) {
+          matchedEvents.forEach(event => {
+            cellHTML += `
+              <div class="event-title">
+                ${event?.title?.slice(0, 10)}...
+              </div>
+            `;
+          });
+
+          cell.classList.add("event-day");
+          cell.style.cursor = "pointer";
+
+          cell.onclick = () => {
+            showEventDetail(matchedEvents[0]);
+          };
+        }
+
+        cell.innerHTML = cellHTML;
+
+        /* Today Highlight */
         const today = new Date();
         if (
           date === today.getDate() &&
@@ -181,24 +211,12 @@ function renderCalendar() {
           cell.classList.add("today");
         }
 
-        /* Check and Highlight Events */
-        // Formats date as YYYY-MM-DD for comparison
-        let d = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(date).padStart(2, "0")}`;
-        let matchedEvent = data.find((e) => e.date === d);
-
-        if (matchedEvent) {
-          cell.classList.add("event-day");
-          cell.style.cursor = "pointer";
-          
-          // Click event to show details
-          cell.onclick = () => {
-            showEventDetail(matchedEvent);
-          };
-        }
         date++;
       }
+
       row.appendChild(cell);
     }
+
     tbody.appendChild(row);
   }
 }
