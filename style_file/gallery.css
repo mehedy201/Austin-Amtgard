@@ -1,0 +1,79 @@
+:root {
+  --gallery_primary-heading-text-color: #2b2b2b;
+  --gallery_text-color: #3a2f24;
+  --gallery_button-text-color: #1f3a32;
+  --gallery_golden-border-color-1: #b67e04;
+  --gallery_golden-border-color-2: #e0b860;
+  --gallery_bg-paper-texture1: url("../assets/backgroundImage/body_bg_1.avif");
+  --gallery_bg-button: url("../assets/backgroundImage/buttonBackground.avif");
+  --gallery_font-home-heading: "Pirata One", serif;
+  --gallery_font-heading: "Cinzel", serif;
+  --gallery_font-text: "Inter", sans-serif;
+}
+
+body {
+  background: var(--gallery_bg-paper-texture1) no-repeat top/cover;
+}
+/* Calander Page Styles  */
+.gallery_page {
+  position: relative;
+}
+
+/* Top Icons  */
+.gallery_page .top_left_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+.gallery_page .top_center_icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+}
+.gallery_page .top_right_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive icon sizes*/
+@media (max-width: 768px) {
+  .gallery_page .top_left_icon {
+    width: 80px;
+    height: auto;
+  }
+  .gallery_page .top_center_icon {
+    width: 200px;
+    height: auto;
+    top: -20px;
+  }
+  .gallery_page .top_right_icon {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Titles */
+.gallery_page_title{
+padding-top: 40px;
+font-family: var(--gallery_font-heading);
+font-size: 42px;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* divider  */
+.divider{
+    width: 100%;
+    margin: 0px 0px 1px 0px;
+    padding-bottom: 2px;
+    border: 4px ridge var(--gallery_golden-border-color-1);
+    box-shadow: 5px 5px 10px var(--gallery_primary-heading-text-color);
+}
