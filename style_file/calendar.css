@@ -12,7 +12,7 @@
 }
 
 body {
-  background: var(--bg-paper-texture1) no-repeat top/cover;
+  background: var(--calendar_bg-paper-texture1) no-repeat top/cover;
 }
 /* Calander Page Styles  */
 .calendar_page {

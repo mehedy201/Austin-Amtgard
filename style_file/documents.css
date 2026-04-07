@@ -1,0 +1,104 @@
+:root {
+  --documents_primary-heading-text-color: #2b2b2b;
+  --documents_text-color: #3a2f24;
+  --documents_button-text-color: #1f3a32;
+  --documents_golden-border-color-1: #b67e04;
+  --documents_golden-border-color-2: #e0b860;
+  --documents_bg-paper-texture1: url("../assets/backgroundImage/body_bg_1.avif");
+  --documents_bg-button: url("../assets/backgroundImage/buttonBackground.avif");
+  --documents_font-home-heading: "Pirata One", serif;
+  --documents_font-heading: "Cinzel", serif;
+  --documents_font-text: "Inter", sans-serif;
+}
+
+body {
+  background: var(--documents_bg-paper-texture1) no-repeat top/cover;
+}
+/* Calander Page Styles  */
+.documents_page {
+  position: relative;
+}
+
+/* Top Icons  */
+.documents_page .top_left_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+.documents_page .top_center_icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+}
+.documents_page .top_right_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive icon sizes*/
+@media (max-width: 768px) {
+  .documents_page .top_left_icon {
+    width: 80px;
+    height: auto;
+  }
+  .documents_page .top_center_icon {
+    width: 200px;
+    height: auto;
+    top: -20px;
+  }
+  .documents_page .top_right_icon {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Titles */
+.documents_page_title{
+padding-top: 40px;
+font-family: var(--documents_font-heading);
+font-size: 42px;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* divider  */
+.divider{
+    width: 100%;
+    margin: 0px 0px 1px 0px;
+    padding-bottom: 2px;
+    border: 4px ridge var(--documents_golden-border-color-1);
+    box-shadow: 5px 5px 10px var(--documents_primary-heading-text-color);
+}
+
+
+/* Documents Page First Section  */
+.documents_first_sec{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.documents_first_sec .document_first_sec_img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+.documents_first_sec .documents_page_text{
+    padding-top: 10px;
+    font-family: var(--documents_font-text);
+}
+.documents_first_sec .document_first_sec_img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
