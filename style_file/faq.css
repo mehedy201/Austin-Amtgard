@@ -1,0 +1,133 @@
+:root {
+  --faq_primary-heading-text-color: #2b2b2b;
+  --faq_text-color: #3a2f24;
+  --faq_button-text-color: #1f3a32;
+  --faq_golden-border-color-1: #b67e04;
+  --faq_golden-border-color-2: #e0b860;
+  --faq_bg-paper-texture1: url("../assets/backgroundImage/body_bg_1.avif");
+  --faq_bg-button: url("../assets/backgroundImage/buttonBackground.avif");
+  --faq_font-home-heading: "Pirata One", serif;
+  --faq_font-heading: "Cinzel", serif;
+  --faq_font-text: "Inter", sans-serif;
+}
+
+body {
+  background: var(--faq_bg-paper-texture1) no-repeat top/cover;
+}
+/* Calander Page Styles  */
+.faq_page {
+  position: relative;
+}
+
+/* Top Icons  */
+.faq_page .top_left_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+}
+.faq_page .top_center_icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+}
+.faq_page .top_right_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: auto;
+}
+
+/* Responsive icon sizes*/
+@media (max-width: 768px) {
+  .faq_page .top_left_icon {
+    width: 80px;
+    height: auto;
+  }
+  .faq_page .top_center_icon {
+    width: 200px;
+    height: auto;
+    top: -20px;
+  }
+  .faq_page .top_right_icon {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Titles */
+.faq_page_title{
+padding-top: 40px;
+font-family: var(--faq_font-heading);
+font-size: 42px;
+text-align:center;
+margin-bottom:20px;
+}
+
+/* divider  */
+.divider{
+    width: 100%;
+    margin: 0px 0px 1px 0px;
+    padding-bottom: 2px;
+    border: 4px ridge var(--faq_golden-border-color-1);
+    box-shadow: 5px 5px 10px var(--faq_primary-heading-text-color);
+}
+
+/* First Section  */
+.faq_first_sec .faq_page_sub_title{
+padding-top: 30px;
+font-family: var(--faq_font-heading);
+font-size: 36px;
+text-align:center;
+}
+.faq_first_sec .faq_page_text{
+    text-align: center;
+    font-family: var(--faq_font-text);
+}
+
+/* Faq page QA Section  */
+/* card Icons  */
+.faq_card_box{
+    position: relative;
+    border: 4px ridge var(--faq_golden-border-color-1);
+    margin-top: 5px;
+}
+.faq_img_top_left_icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: auto;
+}
+.faq_img_top_right_icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: auto;
+}
+.faq_img_bottom_left_icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: auto;
+}
+.faq_img_bottom_right_icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 35px;
+  height: auto;
+}
+.faq_card_content{
+    padding: 20px;
+}
+.faq_card_text{
+    font-family: var(--faq_font-text);
+}
