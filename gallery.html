@@ -77,20 +77,76 @@
     <!-- Main Body  -->
     <main class="gallery_page">
       <!-- Icon -->
-      <img class="top_left_icon" src="./assets/new-plyer-page/corner_top_left_icon.avif" alt="icon">
-      <img class="top_center_icon" src="./assets/new-plyer-page/center_ornament_icon.avif" alt="icon">
-      <img class="top_right_icon" src="./assets/new-plyer-page/corner_top_right_icon.avif" alt="icon">
+      <img
+        class="top_left_icon"
+        src="./assets/new-plyer-page/corner_top_left_icon.avif"
+        alt="icon"
+      />
+      <img
+        class="top_center_icon"
+        src="./assets/new-plyer-page/center_ornament_icon.avif"
+        alt="icon"
+      />
+      <img
+        class="top_right_icon"
+        src="./assets/new-plyer-page/corner_top_right_icon.avif"
+        alt="icon"
+      />
       <h1 class="gallery_page_title">Gallery</h1>
-      <div style="margin: 30px 0px;">
-         <div class="divider"></div>
-       </div>
+      <div style="margin: 30px 0px 0px 0px">
+        <div class="divider"></div>
+      </div>
 
-       <!-- First Section  -->
-       <div class="container">
-        <div class="gallery_first_sec">
-           
+      <!-- First Section  -->
+      <div class="gallery_first_sec">
+        <div class="gallery_background_overly">
+          <div class="container">
+            <p class="gallery_page_text">
+              Step into the world of Nocturnis through our photo gallery. See
+              the battles, friendships, and adventures of our Amtgard community
+              in Austin, Texas.
+            </p>
+          </div>
         </div>
-       </div>
+      </div>
+
+      <!-- Second Section  Photo Gallery -->
+      <!-- <div class="photo_gallery_div container">
+          <img src="./assets/gallery-page/gallery1.jpg" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery2.jpg" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery3.avif" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery4.jpg" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery5.avif" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery6.avif" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery7.jpg" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery8.avif" alt="" class="gallery_img">
+          <img src="./assets/gallery-page/gallery9.avif" alt="" class="gallery_img">
+       </div> -->
+
+      <!-- Gallery Container -->
+      <div class="photo_gallery_div container">
+        <img src="./assets/gallery-page/gallery1.jpg" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery2.jpg" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery3.avif" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery4.jpg" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery5.avif" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery6.avif" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery7.jpg" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery8.avif" class="gallery_img" />
+        <img src="./assets/gallery-page/gallery9.avif" class="gallery_img" />
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox">
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+        <!-- Prev Button -->
+        <span class="prev">&#10094;</span>
+        <!-- Image -->
+        <img class="lightbox_img" />
+        <!-- Next Button -->
+        <span class="next">&#10095;</span>
+      </div>
     </main>
 
     <footer>
@@ -110,5 +166,6 @@
     </footer>
 
     <script src="./javascript/header_footer.js"></script>
+    <script src="./javascript/gallery.js"></script>
   </body>
 </html>
