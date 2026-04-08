@@ -106,7 +106,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  padding: 50px 0px;
+  padding: 50px 20px;
 }
 
 /* Tablet */

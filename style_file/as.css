@@ -141,3 +141,14 @@ margin-bottom:10px;
 .as_card_text{
     font-family: var(--as_font-text);
 }
+
+@media (max-width: 768px) {
+    .as_card_div{
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+    .as_card_div{
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
