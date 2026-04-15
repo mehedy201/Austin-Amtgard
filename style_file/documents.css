@@ -182,9 +182,7 @@ font-size: 30px;
 .active::after {
 content: "\2212";
 }
-.active, .accordion:hover {
-background-color: #ffffff;
-}
+
 .panel {
 padding: 0 18px;
 background-color: #f3ead6;
