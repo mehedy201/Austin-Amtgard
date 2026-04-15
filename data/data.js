@@ -12,10 +12,10 @@ export const data = [
   {
     id: 2,
     title: "3rd Annual Munchies at Nocturnus",
-    date: "2026-04-18",
+    date: "2026-04-17",
     location: "Austin, TX",
     subtitle: "Arts & Sciences Gathering + Community Feast",
-    time: "Saturday, April 18, 2026 — Begins at 1:00 PM",
+    time: "Saturday, April 17, 2026 — Begins at 1:00 PM",
     fullLocation: "Beverly S. Sheffield Northwest District Park, Austin, Texas",
     description:
       "Munchies at Nocturnus is a relaxed Arts & Sciences gathering combined with a shared community feast. Bring your craft, bring a dish to share, and spend the day enjoying the creativity of the community.",
