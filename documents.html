@@ -111,28 +111,6 @@
           <h2>Amtgard Guides & Resources</h2>
           <div style="display: flex; gap: 10px; align-items: center">
             <a
-              href="https://amtgardck.org/contactus"
-              target="_blank"
-              style="
-                text-decoration: none;
-                display: flex;
-                margin: 15px 0px 10px 0px;
-              "
-            >
-              <div class="document_cta_inside">
-                <div class="document_cta_border">
-                  <span class="document_cta_a"
-                    ><img
-                      style="width: 24px; height: auto; padding-right: 4px"
-                      src="./assets//documents-page/link.png"
-                      alt=""
-                    />
-                    View Official Documents</span
-                  >
-                </div>
-              </div>
-            </a>
-            <a
               href="https://amtgardck.org/shop/product/dues-4#attr=12,1,14,15"
               target="_blank"
               style="
@@ -154,27 +132,23 @@
                 </div>
               </div>
             </a>
-            <a
-              href="https://ork.amtgard.com/orkui/"
-              target="_blank"
-              style="
-                text-decoration: none;
-                display: flex;
-                margin: 15px 0px 10px 0px;
-              "
-            >
-              <div class="document_cta_inside">
-                <div class="document_cta_border">
-                  <span class="document_cta_a"
-                    ><img
-                      style="width: 24px; height: auto; padding-right: 4px"
-                      src="./assets//documents-page/link.png"
-                      alt=""
-                    />Open the ORK.</span
-                  >
-                </div>
-              </div>
-            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="accordion">View Official Documents</button>
+            <div class="panel">
+              <a class="panel_link" style="padding-top: 18px;" href="https://drive.google.com/file/d/1mJFCP7hQ-PxG9NFqHmFlUm7xC7cR2C7e/view" target="_blank" rel="noopener noreferrer">Rulebook (8.5.3 Official)</a>
+              <a class="panel_link" href="https://drive.google.com/file/d/1x1WnjYcg1AF3ZA0V_fQDFoBQxeuOTThO/view" target="_blank" rel="noopener noreferrer">Corpora</a>
+              <a class="panel_link" href="https://docs.google.com/spreadsheets/d/1p2-1CRPc1b3RUDWDoSH0Om_OkzhwxlFafD8pG2eEMds/edit" target="_blank" rel="noopener noreferrer">Kingdom Rulings</a>
+              <a class="panel_link" href="https://drive.google.com/file/d/1q3_Jp1Bll4ipaNOSxH8x0JE63nlv-2O2/view" target="_blank" rel="noopener noreferrer">Anti-Harassment</a>
+              <a class="panel_link" href="https://docs.google.com/document/d/1a6gi82O1T8cS3fQufOUNqd1nQRveKRE0IRurNt0MFhE/view" target="_blank" rel="noopener noreferrer">Anti-Assault</a>
+              <a class="panel_link" href="https://drive.google.com/file/d/1qvui2C-TROZ6qPy0ONG05F5F5BiBfgbb/edit" target="_blank" rel="noopener noreferrer">Social Media Policy </a>
+              <a class="panel_link" style="padding-bottom: 18px;" href="https://drive.google.com/drive/folders/1n3JaS1AX53b-7-cdzYixmmKuvg_XBiXN" target="_blank" rel="noopener noreferrer">Kingdom Newsletter</a>
+            </div>
           </div>
         </div>
       </div>
@@ -195,6 +169,21 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
 
     <script src="./javascript/header_footer.js"></script>
   </body>
