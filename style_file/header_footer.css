@@ -284,6 +284,7 @@ footer .footer_golden_bar{
 }
 .email_div p{
     text-align: center;
+    color: #f3ead6;
 }
 .email_div a{
     color: var(--primary-heading-text-color);
