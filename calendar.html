@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="./style_file/header_footer.css" />
     <link rel="stylesheet" href="./style_file/calendar.css" />
     <!-- Fonts -->
@@ -35,11 +35,6 @@
               <li><a href="/as.html">Arts & Sciences</a></li>
               <li><a href="/documents.html">Documents</a></li>
               <li><a href="/gallery.html">Gallery</a></li>
-              <span class="header_button_parent">
-                <a href="/new-players.html"
-                  ><button class="header_button">Join Us!</button></a
-                >
-              </span>
             </ul>
           </nav>
           <!-- Hamurger button -->
@@ -66,84 +61,119 @@
           <li><a href="/as.html">Arts & Sciences</a></li>
           <li><a href="/documents.html">Documents</a></li>
           <li><a href="/gallery.html">Gallery</a></li>
-          <div class="mobile_header_button_parent">
-            <a href="/new-players.html"
-              ><button class="mobile_header_button">Join Us!</button></a
-            >
-          </div>
         </ul>
       </div>
     </nav>
 
     <!-- Main Body  -->
-    
+
     <main class="calendar_page">
-       <!-- Icon -->
-      <img class="top_left_icon" src="./assets/new-plyer-page/corner_top_left_icon.avif" alt="icon">
-      <img class="top_center_icon" src="./assets/new-plyer-page/center_ornament_icon.avif" alt="icon">
-      <img class="top_right_icon" src="./assets/new-plyer-page/corner_top_right_icon.avif" alt="icon">
+      <!-- Icon -->
+      <img
+        class="top_left_icon"
+        src="./assets/new-plyer-page/corner_top_left_icon.avif"
+        alt="icon"
+      />
+      <img
+        class="top_center_icon"
+        src="./assets/new-plyer-page/center_ornament_icon.avif"
+        alt="icon"
+      />
+      <img
+        class="top_right_icon"
+        src="./assets/new-plyer-page/corner_top_right_icon.avif"
+        alt="icon"
+      />
       <h1 class="calendar_page_title">Calendar</h1>
-      <div style="margin: 30px 0px;">
-         <div class="divider"></div>
-       </div>
+      <div style="margin: 30px 0px">
+        <div class="divider"></div>
+      </div>
       <div class="container">
-      <!-- ============================= -->
-      <!-- Calendar Section -->
-      <!-- ============================= -->
+        <!-- ============================= -->
+        <!-- Calendar Section -->
+        <!-- ============================= -->
 
-      <section class="calendar-section">
+        <section class="calendar-section">
+          <div class="calendar-controls">
+            <button id="prevYear">◀</button>
+            <h2 id="yearDisplay"></h2>
+            <button id="nextYear">▶</button>
+          </div>
 
-        <div class="calendar-controls">
-          <button id="prevYear">◀</button>
-          <h2 id="yearDisplay"></h2>
-          <button id="nextYear">▶</button>
-        </div>
+          <div class="month-navigation" id="monthNav"></div>
+          <h2 id="selectedMonthTitle" class="selected-month-title"></h2>
 
-        <div class="month-navigation" id="monthNav"></div>
-        <h2 id="selectedMonthTitle"
-          class="selected-month-title">
-        </h2>
+          <div class="calendar-wrapper">
+            <table class="calendar-table">
+              <thead>
+                <tr>
+                  <th>S</th>
+                  <th>M</th>
+                  <th>T</th>
+                  <th>W</th>
+                  <th>Th</th>
+                  <th>F</th>
+                  <th>S</th>
+                </tr>
+              </thead>
 
-        <div class="calendar-wrapper">
-          <table class="calendar-table">
-            <thead>
-              <tr>
-                <th>S</th>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>Th</th>
-                <th>F</th>
-                <th>S</th>
-              </tr>
-            </thead>
+              <tbody id="calendarBody"></tbody>
+            </table>
+          </div>
+        </section>
+        <!-- ============================= -->
+        <!-- Weekly Schedule -->
+        <!-- ============================= -->
 
-            <tbody id="calendarBody"></tbody>
-          </table>
-        </div>
-      </section>
-      <!-- ============================= -->
-      <!-- Weekly Schedule -->
-      <!-- ============================= -->
+        <section class="weekly-schedule">
+          <h2>Weekly Park Schedule</h2>
 
-      <section class="weekly-schedule">
-        <h2>Weekly Park Schedule</h2>
+          <ul>
+            <li>Sunday — —</li>
+            <li>
+              Monday at 8:00 PM —
+              <a
+                style="text-decoration: none"
+                href="https://maps.app.goo.gl/dDqqKPaUoZWcJPNV7"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fighter Practice at Browning Hangar, 1550 Mueller Blvd, Austin,
+                TX 78723</a
+              >
+            </li>
+            <li>
+              Thursday at 8:00 PM —
+              <a
+                style="text-decoration: none"
+                href="https://maps.app.goo.gl/dDqqKPaUoZWcJPNV7"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Fighter Practice at Browning Hangar, 1550 Mueller Blvd, Austin,
+                TX 78723</a
+              >
+            </li>
+            <li>Wednesday — —</li>
+            <li>Thursday — —</li>
+            <li>Friday — —</li>
 
-        <ul>
-          <li>Sunday — —</li>
-          <li>Monday at 8:00 PM — <a style="text-decoration: none;" href="https://maps.app.goo.gl/dDqqKPaUoZWcJPNV7" target="_blank" rel="noopener noreferrer">Fighter Practice at Browning Hangar, 1550 Mueller Blvd, Austin, TX 78723</a></li>
-          <li>Thursday at 8:00 PM — <a style="text-decoration: none;" href="https://maps.app.goo.gl/dDqqKPaUoZWcJPNV7" target="_blank" rel="noopener noreferrer">Fighter Practice at Browning Hangar, 1550 Mueller Blvd, Austin, TX 78723</a></li>
-          <li>Wednesday — —</li>
-          <li>Thursday — —</li>
-          <li>Friday — —</li>
+            <li class="saturday">
+              Saturday at 1:00 PM —
+              <a
+                style="text-decoration: none"
+                href="https://maps.app.goo.gl/aVpoCkxWBXomZ1Xj7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Regular Park Day at Beverly S. Sheffield Northwest District
+                Park, 7000 Ardath St, Austin, TX 78757</a
+              >
+            </li>
+          </ul>
+        </section>
 
-          <li class="saturday">Saturday at 1:00 PM — <a style="text-decoration: none;" href="https://maps.app.goo.gl/aVpoCkxWBXomZ1Xj7" target="_blank" rel="noopener noreferrer"> Regular Park Day at Beverly S. Sheffield Northwest District Park, 7000 Ardath St, Austin, TX 78757</a></li>
-        </ul>
-      </section>
-
-      <!-- ============================= -->
-      <!-- Upcoming Events -->
-      <!-- ============================= -->
+        <!-- ============================= -->
+        <!-- Upcoming Events -->
+        <!-- ============================= -->
 
         <section class="events-section">
           <h2>Upcoming Events</h2>
@@ -161,9 +191,8 @@
           </table>
 
           <!-- Expandable Event Detail -->
-           <div id="modalOverlay" class="modal-overlay">
-              <div id="eventDetail" class="event-detail">
-              </div>
+          <div id="modalOverlay" class="modal-overlay">
+            <div id="eventDetail" class="event-detail"></div>
           </div>
         </section>
       </div>
